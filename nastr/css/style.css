@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
+html, body{width:100%; overflow-x:hidden}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+}
+.hdr img {
+  margin-top: 0px;
+}
+
+body {
+  background: var(--color-secondary);
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--color-secondary);
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+
+
+}
+.chng {
+  color: var(--font-color);
+}
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #2a2c2d;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+
+}
+.container h1 {
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3b3b3b;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('https://i.ibb.co/FxzBYR9/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 1500px;
+  height: 800px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: white;
+  margin-top: 40px;
+
+}
+.close1 {
+	background: red;
+  transition: 0.8s;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close1:hover { background: OrangeRed; }
+#openModal, #openModal1, #openModal2, #openModal3, #openModal4, #openModal5, #openModal6 h1, p {
+  color: black;
+}
+.clock {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  padding: 2rem;
+  border: 7px solid #282828;
+  box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  margin-left: 30px;
+  margin-top: -300px;
+
+}
+.outer-clock-face {
+  position: relative;
+  background: #282828;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.outer-clock-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #1df52f;
+  z-index: 0;
+  left: 49%;
+}
+.outer-clock-face .marking {
+  background: #bdbdcb;
+  width: 3px;
+}
+
+.outer-clock-face .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg)
+}
+
+.outer-clock-face .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg)
+}
+
+.outer-clock-face .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg)
+}
+
+.outer-clock-face .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg)
+}
+.inner-clock-face {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: #282828;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.inner-clock-face::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #4d4b63;
+  z-index: 11;
+}
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #61afff;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.min-hand {
+  height: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second-hand {
+  background: #ee791a;
+  width: 45%;
+  height: 2px;
+}
+
+a.but  {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  margin-left: 5px;
+
+
+}
+a.but:hover { background: rgb(53, 167, 110); }
+a.but:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+.but_margin {
+  margin-top: 350px;
+}
+
+a {
+  text-decoration: none;
+  transition: color 600ms ease;
+  font-size: 20px;
+
+}
+
+img {max-width: 100%}
+header {
+  width: 90%;
+  padding: 20px 5%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+
+
+}
+header > .logo {
+  font-size: 13px;
+  font-weight: 700;
+  align-items: center;
+  color: OrangeRed;
+
+}
+
+
+.hdr {
+color: OrangeRed;
+background-color: black;
+}
+
+header > .nav {
+  position: relative;
+  left: -50px;
+}
+header > .nav a {
+  margin: 0 15px;
+  display: inline-block;
+  color: white;
+}
+
+header > .nav a:hover {
+  color: OrangeRed;
+}
+header > .nav a.nastroiki {
+  color: OrangeRed;
+}
+
+header > .menu {
+  cursor: pointer;
+  color: white;
+  font-size: 29px;
+}
+.fixed {
+  position: fixed;
+  top:0;
+  left: 0;
+  border-bottom: 2px solid OrangeRed;
+}
+#hidden-menu {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 50vh;
+  background: black;
+  z-index: 10;
+  text-align: center;
+  border-radius: 10px;
+  border-bottom: 2px solid OrangeRed;
+  border-left: 2px solid OrangeRed;
+  border-top: 2px solid OrangeRed;
+  border-right: 2px solid OrangeRed;
+}
+#hidden-menu .close {
+  font-size: 40px;
+  float: right;
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 600ms ease;
+  color: white;
+}
+#hidden-menu .close:hover {color: OrangeRed}
+
+#hidden-menu h2 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: white;
+}
+#hidden-menu ul {list-style: none}
+#hidden-menu ul li {
+  display: block;
+  margin-bottom: 10px;
+}
+#hidden-menu ul li a {color:white}
+#hidden-menu ul li a:hover {color:OrangeRed}
+
+
+
+header > .menu:hover {
+  transition: color 600ms ease;
+  color: OrangeRed;
+}
+
+.full-page {
+  height: 120px;
+  background: var(--color-secondary);
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--color-secondary);
+  text-align: center;
+  color: #fff;
+
+
+footer {
+  width: 90%;
+  padding: 50px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.vse {
+  margin-left: 650px;
+  margin-top: -80px;
+}
+
+footer {
+  background-color: #fffaf0;
+}
+
+
+
+
+
+/* !Media */
+
+@media only screen and (max-width: 1600px) {
+  .nav {
+    margin-left: 60px;
+    }
+    .features img {
+      max-height: 150px;
+      max-width: 150px;
+    }
+    .full-page button {
+      padding: 15px 20px;
+
+    }
+    .full-page h1 {
+
+      font-size:35px;
+
+      margin: 0 auto;
+    }
+    .vse {
+      margin-left: 590px;
+      margin-top: -80px;
+    }
+    .features {
+    }
+    .full-page {
+      height: 70vh;
+    }
+
+}

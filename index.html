@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="shortcut icon" type="image/x-icon" href="https://favicon.vspravke.com/ico/1/faviconka.ru_1_164802.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>СистеММониторинг</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  <script type="text/javascript">
+
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+  <!-- *Header -->
+
+  <header class="hdr animate__animated animate__fadeInDown" >
+    <a class="logo" href="index.html">
+        <h1><img width="25px" height="25px" src="https://favicon.vspravke.com/ico/1/faviconka.ru_1_164802.ico" alt=" " />  СистеММониторинг</h1>
+    </a>
+    <div class="nav" id="navig">
+<a class ="glav" href="" onclick="return false;">Мониторинг</a>
+<a class="first"  href="#openModal6">Настройки</a>
+
+
+    </div>
+
+<a  id="usernm" class="baz"  href="" onclick="return false;" ></a>
+    <span class ="menu" id="show-menu">
+      <i class="fas fa-bars"></i>
+    </span>
+  </header>
+  <div>
+    <h1 class="chng" >МОНИТОРИНГ</h1>
+  </div>
+
+  <div id="chartContainer" style="height: 200px; max-width: 400px; margin-left: 500px; margin-top: 70px;">
+  	</div>
+    <div id="chartContainer1" style="height: 200px; max-width: 400px; margin-left: 1000px; margin-top: -200px;">
+    	</div>
+      <div id="chartContainer2" style="height: 200px; max-width: 400px; margin-left: 1000px; margin-top: 70px;">
+      	</div>
+        <div id="chartContainer3" style="height: 200px; max-width: 400px; margin-left: 500px; margin-top: -200px;">
+        	</div>
+
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Последние проблемы</h1>
+		<p>Здесь отображается список последних известных проблем</p>
+    <div class="loader">
+
+      <div class="inner one"></div>
+      <div class="inner two"></div>
+      <div class="inner three"></div>
+
+    </div>
+<h1 class="newinfo">Выполняется поиск проблем...</h1>
+<h1 class="newinfo1">Список найденных проблем: </h1>
+<div class="upercase2">
+  <h2 class="attention1 bob1"> Компьютер 3 скорость интернет подключения ниже нормы</h2>
+</div>
+<div class="upercase2">
+  <h2 class="attention2 bob2"> Компьютер 2 температура процессора выше нормы</h2>
+</div>
+	</div>
+</div>
+
+<div id="openModal2" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Подключенные устройства</h1>
+		<p>Список подключенных устройств</p>
+
+      <div class="butt_ butt1">
+        <a href="#openModal8" class="butt">Компьютер 1</a>
+      </div>
+      <div class="butt_ butt2">
+        <a href="#openModal9" class="butt">Компьютер 2</a>
+      </div>
+      <div class="butt_ butt3">
+        <a href="#openModal10" class="butt">Компьютер 3</a>
+      </div>
+      <div class="butt_ butt4">
+        <a href="#openModal11" class="butt">Компьютер 4</a>
+      </div>
+
+      <div class="butt_ butt5">
+        <a href="#openModal12" class="butt">Компьютер 5</a>
+      </div>
+
+
+
+
+
+	</div>
+</div>
+<div id="openModal3" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Последняя информация</h1>
+		<p>Последние сообщение от устройств</p>
+<h1 class="marge">Количество запросов в данный момент: </h1> <h1 id="output1"></h1>
+<h1 class="marge">Средняя нагрузка процессоров в данный момент: </h1> <h1 id="output2"> </h1>
+<h1 class="marge">Нагрузка базы данных в данный момент: </h1> <h1 id="output3"> </h1>
+<h1 class="marge">Средняя нагрузка жёстких дисков в данный момент: </h1> <h1 id="output4"> </h1>
+
+	</div>
+</div>
+
+<div id="openModal5" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Сервисы</h1>
+		<p>Добавление пользовательского сервиса</p>
+<div id="ones" class="addservice1">
+  <a href="#" class="but addservice">Добавить сервис</a>
+</div>
+
+	</div>
+</div>
+<div id="openModal6" class="modalDialog modalDialogSPEC">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Настройки</h1>
+
+    <div class="container">
+      <h1 class="chng">Сменить тему</h1>
+      <label id="switch" class="switch">
+              <input type="checkbox" onchange="toggleTheme()" id="slider">
+              <span class="slider round"></span>
+          </label>
+      <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
+    </div>
+
+	</div>
+</div>
+<div id="openModal8" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Компьютер 1</h1>
+		<div class="operator">
+      <h2>Имя пользователя: Ерёмин Иван </h2>
+      <h2>Почта: ivan1337@mail.ru </h2>
+      <h2>Номер телефона: +7-898-654-04-01</h2>
+      <h2>Отдел: Отдел информационных технологий</h2>
+      <h2>Статус: </h2><h2 class="bob">ВКЛЮЧЕН</h2>
+      <h2>Сбои: </h2><h2 class="bob">НЕ ОБНАРУЖЕНЫ</h2>
+      <h2>Температура процессора: </h2> <h2 class="bob" id="rand"></h2>
+      <h2>Скорость интернет-подключения:</h2> <h2 class="bob" id="rand1"></h2>
+      <h2>Нагрузка на жёсткий диск:</h2> <h2 class="bob1" id="rand2"></h2>
+      <button class="but_on"  name="ВКЛ">ВКЛ</button>
+      <button class="but_off"  name="ВЫКЛ">ВЫКЛ</button>
+    </div>
+
+	</div>
+</div>
+<div id="openModal9" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Компьютер 2</h1>
+		<div class="operator">
+      <h2>Имя пользователя: Гаджиев Александр </h2>
+      <h2>Почта: gadj.alex@mail.ru </h2>
+      <h2>Номер телефона: +7-877-634-24-23</h2>
+      <h2>Отдел: Отдел покрасочного производства</h2>
+      <h2>Статус: </h2><h2 class="bob">ВКЛЮЧЕН</h2>
+      <h2>Сбои: </h2><h2 class="bob">НЕ ОБНАРУЖЕНЫ</h2>
+      <h2>Температура процессора: </h2> <h2 class="bob1" id="rand3"></h2>
+      <h2>Скорость интернет-подключения:</h2> <h2 class="bob" id="rand4"></h2>
+      <h2>Нагрузка на жёсткий диск:</h2> <h2 class="bob" id="rand5"></h2>
+      <button class="but_on"  name="ВКЛ">ВКЛ</button>
+      <button class="but_off"  name="ВЫКЛ">ВЫКЛ</button>
+    </div>
+
+	</div>
+</div>
+<div id="openModal10" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+		<h1>Компьютер 3</h1>
+		<div class="operator">
+      <h2>Имя пользователя: Сугробов Андрей </h2>
+      <h2>Почта: snegohodov@mail.ru </h2>
+      <h2>Номер телефона: +7-967-688-33-29</h2>
+      <h2>Отдел: Отдел автоматизации производства</h2>
+      <h2>Статус: </h2><h2 class="bob">ВКЛЮЧЕН</h2>
+      <h2>Сбои: </h2><h2 class="bob">НЕ ОБНАРУЖЕНЫ</h2>
+      <h2>Температура процессора: </h2> <h2 class="bob" id="rand6"></h2>
+      <h2>Скорость интернет-подключения:</h2> <h2 class="bob2" id="rand7"></h2>
+      <h2>Нагрузка на жёсткий диск:</h2> <h2 class="bob" id="rand8"></h2>
+      <button class="but_on"  name="ВКЛ">ВКЛ</button>
+      <button class="but_off"  name="ВЫКЛ">ВЫКЛ</button>
+    </div>
+
+	</div>
+</div>
+
+<div id="openModal11" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+    <h1>Компьютер 4</h1>
+		<div class="operator">
+      <h2>Имя пользователя: Васильев Денис </h2>
+      <h2>Почта: vasilevden@gmail.com </h2>
+      <h2>Номер телефона: +7-961-112-78-22</h2>
+      <h2>Отдел: Отдел автоматизации производства</h2>
+      <h2>Статус: </h2><h2 class="bob4">ВЫКЛЮЧЕН</h2>
+      <h2>Сбои: </h2><h2 class="bob3">НЕ ОБНАРУЖЕНЫ</h2>
+      <h2>Температура процессора: </h2> <h2 class="bob3" >0 C</h2>
+      <h2>Скорость интернет-подключения:</h2> <h2 class="bob3" >0 м/бит в сек</h2>
+      <h2>Нагрузка на жёсткий диск:</h2> <h2 class="bob3" >0 %</h2>
+      <button class="but_on"  name="ВКЛ">ВКЛ</button>
+      <button class="but_off"  name="ВЫКЛ">ВЫКЛ</button>
+    </div>
+
+	</div>
+</div>
+<div id="openModal12" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close1">X</a>
+    <h1>Компьютер 5</h1>
+		<div class="operator">
+      <h2>Имя пользователя: Илья Богатноу </h2>
+      <h2>Почта: yailyabogatnou@mail.ru </h2>
+      <h2>Номер телефона: +7-968-764-00-00</h2>
+      <h2>Отдел: Отдел информационных технологий</h2>
+      <h2>Статус: </h2><h2 class="bob">ВКЛЮЧЕН</h2>
+      <h2>Сбои: </h2><h2 class="bob">НЕ ОБНАРУЖЕНЫ</h2>
+      <h2>Температура процессора: </h2> <h2 class="bob" id="rand11"></h2>
+      <h2>Скорость интернет-подключения:</h2> <h2 class="bob" id="rand9"></h2>
+      <h2>Нагрузка на жёсткий диск:</h2> <h2 class="bob" id="rand10"></h2>
+      <button class="but_on"  name="ВКЛ">ВКЛ</button>
+      <button class="but_off"  name="ВЫКЛ">ВЫКЛ</button>
+    </div>
+
+	</div>
+</div>
+
+
+
+  <div class="clock">
+    <div class="outer-clock-face">
+      <div class="marking marking-one"></div>
+  <div class="marking marking-two"></div>
+  <div class="marking marking-three"></div>
+  <div class="marking marking-four"></div>
+  <div class="inner-clock-face">
+    <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+          </div>
+    </div>
+</div>
+
+  <div  class="but_margin">
+    <a href="#openModal" class="but button7">Неполадки</a>
+    <a href="#openModal2" class="but button9">Оборудование</a>
+    <a href="#openModal3" class="but button10">Сводка с оборудования</a>
+
+    <a id="twice" href="#" class=""></a>
+    <a id="twice1" href="#" class=""></a>
+  </div>
+
+
+
+  <div id="hidden-menu">
+    <span class="close"><i class="fas fa-times"></i></span>
+
+    <!-- *Nav-Menu -->
+
+    <h2>Меню</h2>
+    <ul>
+
+    <li class="exit"><a href ="LOGIN/login-page.html">Сменить пользователя</a></li>
+      <li class="exit"><a href ="LOGIN/login-page.html">Выход</a></li>
+    </ul>
+
+
+  </div>
+
+  <section class = "full-page animate__animated ">
+
+  </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src ="js/indexx.js"></script>
+<script src ="../nastr/js/indexx.js"></script>
+<script src ="js/graf2.js"></script>
+</body>
+</html>
